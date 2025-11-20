@@ -47,17 +47,41 @@ DROP DATABASE
 
 
 
+--- 1;N
+CREATE TABLE companies (
+    company _id INT AUTO_INCREMENT PRIMARY KEY,
+    name varchar(100) NOT NULL
+);
 
 
+ALTER TABLE orders
+MODIFY user_id INT NOT NULL,
+ADD CONSTRAINT fk_orders_user
+    FOREIGN KEY (user_id) REFERENCES users(id);
 
 
+--- 1;N
+ALTER TABLE orders
+ADD CONSTRAINT fk_orders_user
+FOREIGN KEY (user_id) REFERENCES users(id);   
+
+--N:N
 
 
+CREATE TABLE languages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name  VARCHAR(100) NOT NULL
+);
 
-
-
-
-
+CREATE TABLE users_language (
+    users_languagues_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id int , 
+    language_id int ,
+    FOREIGN KEY(user_id) REFERENCE users(user_id),
+    FOREIGN KEY(language_id) REFERENCE languagues(language_id),
+    UNIQUE(user_id, language_id    )
+);
+--autoreferencia
 
 
 
