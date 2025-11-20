@@ -75,12 +75,36 @@ SELECT
     END AS order_size
 FROM orders;
 
+--An INNER JOIN returns only the rows where both tables have matching values.
+SELECT 
+    users.id,
+    users.name,
+    orders.order_id,
+    orders.total
+FROM orders
+INNER JOIN users
+    ON orders.user_id = users.id;
 
 
+--1:N 
+SELECT 
+    users.id,
+    users.name,
+    orders.order_id,
+    orders.total
+FROM users
+LEFT JOIN orders
+    ON users.id = orders.user_id;
 
-
-
-
+--N:N
+SELECT users.name languages.name
+FROM users_languages
+JOIN users ON users_languages.user_id = users.user_id
+JOIN languages ON users_languages.languages_id=langguages.languages_id
+--UNION is used to combine the results of two or more SELECT queries into a single result set.
+SELECT language FROM table1
+UNION
+SELECT language FROM table2;
 
 
 
