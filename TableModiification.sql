@@ -24,11 +24,14 @@ WHERE order_id = 1;
 
 
 
+ALTER TABLE person8
+ADD surname varchar(50);
 
+ALTER TABLE person8
+RENAME COLLUMN surname TO descriiption;
 
-
-
-
+ALTER TABLE person8
+MODIFY surname varchar(500);
 
 
 
