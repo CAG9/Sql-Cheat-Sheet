@@ -1,4 +1,4 @@
-mysql -u root -p #enter
+mysql -u root -p --enter
 SHOW DATABASES;
 exit
 CREATE DATABASE restaurantMiiguel
@@ -11,7 +11,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE products (
-    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT AUTO_INCREMENT  PRIMARY KEY,
     product_name VARCHAR(200) NOT NULL,
     price DECIMAL(10,2) NOT NULL,
     in_stock BOOLEAN DEFAULT TRUE,
@@ -26,7 +26,8 @@ CREATE TABLE orders (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
-
+-- CHECK('age'>=18) reviisia si esa persona es mayor de edad
+-- DEFAULT(XXX)
 
 INSERT INTO products (product_name, price)
 VALUES ('Laptop', 999.99);
@@ -41,6 +42,8 @@ ADD status VARCHAR(20) DEFAULT 'active';
 INSERT INTO orders (user_id, total)
 VALUES (1, 59.99);
 
+
+DROP DATABASE
 
 
 
