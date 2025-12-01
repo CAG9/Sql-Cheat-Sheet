@@ -1,4 +1,4 @@
-# 📘 SQL Cheat Sheet
+# SQL Cheat Sheet
 
 A quick-reference guide covering the most essential SQL commands and concepts. Perfect for interviews, study, or daily development use.
 
@@ -54,13 +54,13 @@ A quick-reference guide covering the most essential SQL commands and concepts. P
 ---
 
 
-## 🧠 Purpose
+## Purpose
 
 This project aims to provide a clean, concise, and practical SQL reference for data engineers, analysts, developers, and students who need a quick reminder of SQL syntax and patterns.
 
 ---
 
-## 🛠️ Compatibility
+## Compatibility
 
 This cheat sheet follows ANSI SQL conventions and is compatible with:
  
@@ -69,7 +69,7 @@ This cheat sheet follows ANSI SQL conventions and is compatible with:
 
 ---
 
-## 📜 License
+## License
 
 This project is released under the **MIT License**, allowing free use in personal and commercial projects.
 
